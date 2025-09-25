@@ -26,4 +26,11 @@ body {
     text-shadow: 2px 2px 8px rgb(255, 255, 255);
 }
 
+.team {
+    padding: 10px 20px;
+    border-radius: 10px;
+}
 
+.red {
+    background: rgba(4, 24, 154, 0.7);
+}
