@@ -2,9 +2,8 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background-image: url("../image/background.png"); /* fixed path */
+    background-image: url("../image/background.png");
     background-size: cover;
-    background-position: center;
     overflow-x: hidden;
 }
 
@@ -33,4 +32,10 @@ body {
 
 .red {
     background: rgba(4, 24, 154, 0.7);
+}
+
+.player {
+    position: absolute;
+    height: 250px;
+    margin-top: 400px;
 }
