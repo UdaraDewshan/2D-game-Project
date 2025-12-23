@@ -58,4 +58,14 @@ function run(){
 }
 
 
+var backgroundId = document.getElementById("background");
 
+var backgroundX = 0;
+var moveBackgroundWorkerId = 0;
+
+function moveBackground(){
+
+    backgroundX = backgroundX - 20;
+
+    backgroundId.style.backgroundPositionX = backgroundX + "px";
+}
