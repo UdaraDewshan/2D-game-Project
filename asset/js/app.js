@@ -69,3 +69,13 @@ function moveBackground(){
 
     backgroundId.style.backgroundPositionX = backgroundX + "px";
 }
+
+//score
+var score = document.getElementById("score");
+var newScore = 0;
+var scoreWorkerId = 0;
+
+function updateScore(){
+    newScore++;
+    score.innerHTML = newScore;
+}
