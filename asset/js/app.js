@@ -11,7 +11,6 @@ function keyCheck(event){
     //enter key
     if(event.which == 13){
 
-
         if(runWorkerId == 0){
            runWorkerId = setInterval(run,100);
             runSound.play();
@@ -92,7 +91,7 @@ function jump(){
    if(jumpImageNumber <= 7){ //jump images 2-7
 
     playerMarginTop = playerMarginTop - 40;
-    playerId.style.marginTop = playerMarginTop +"px";
+    playerID.style.marginTop = playerMarginTop +"px";
 
    }
 
@@ -100,12 +99,10 @@ function jump(){
    if(jumpImageNumber >= 8){ //jump image 8-1
 
     playerMarginTop = playerMarginTop + 40;
-    playerId.style.marginTop = playerMarginTop + "px";
+    playerID.style.marginTop = playerMarginTop + "px";
 
    }
   
-
-
    if(jumpImageNumber ==13){
       jumpImageNumber = 1;
 
@@ -135,5 +132,28 @@ function jump(){
 
    }
 
-   playerId.src= "Jump (" + jumpImageNumber + ").png";
+   playerID.src= "Jump (" + jumpImageNumber + ").png";
+}
+
+
+//create a block 
+
+var blockMarginleft = 400;
+var createBlockWorkId = 0;
+var blockId = 1;
+
+function createBlock(){
+
+    var block = document.createElement("div");
+    block.className = "block";
+    block.id = "block"+ blockId;
+
+    blockId++;
+
+    var gap = Math.random()*(1000-400)+400;
+
+    blockMarginleft = blockMarginLeft+gap;
+    block.style.marginLeft = blockMarginLeft + "px";
+
+    document.getElementById("background").appendChild(block);
 }
