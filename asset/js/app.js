@@ -157,3 +157,11 @@ function createBlock(){
 
     document.getElementById("background").appendChild(block);
 }
+
+//Move Block
+
+var moveBlockWorkerId = 0;
+
+function moveBlock(){
+    
+}
