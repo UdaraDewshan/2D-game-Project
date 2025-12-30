@@ -163,5 +163,18 @@ function createBlock(){
 var moveBlockWorkerId = 0;
 
 function moveBlock(){
-    
+
+    for(var i=1; i<=blockId; i++){
+        
+        var currentBlock = document.getElementById("block" + i);
+        var currentBlockMarginLeft = currentBlock.style.marginLeft;
+        var newBlockMarginLeft = parseInt(currentBlockMarginLeft) - 20;
+
+        currentBlock.style.marginLeft = newBlockMarginLeft + "px";
+
+        alert(newBlockMarginLeft);
+        137,79
+
+    }
+
 }
