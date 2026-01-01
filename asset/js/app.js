@@ -195,3 +195,7 @@ function moveBlock(){
     }
 
 }
+
+function  dead(){
+
+}
