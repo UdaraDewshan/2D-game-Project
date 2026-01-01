@@ -172,8 +172,14 @@ function moveBlock(){
 
         currentBlock.style.marginLeft = newBlockMarginLeft + "px";
 
-        alert(newBlockMarginLeft);
-        137,79
+        if(newBlockMarginLeft < 137 & newBlockMarginLeft > 79){
+            if(playerMarginTop > 250){
+                clearInterval(scoreWorkerId);
+                clearInterval(moveBackgroundWorkerId);
+                clearInterval(runWorkerId);
+                runSound.pause();
+            }
+        }
 
     }
 
