@@ -178,6 +178,17 @@ function moveBlock(){
                 clearInterval(moveBackgroundWorkerId);
                 clearInterval(runWorkerId);
                 runSound.pause();
+
+                clearInterval(jumpWorkerId);
+                jumpWorkerId = -1;
+
+                clearInterval(creatBlockWorkerId);
+                clearInterval(moveBlockWorkerId);
+            
+
+                //alert("Dead");
+                deadWorkerId  =setInterval(dead,100);
+                deadSound.play();
             }
         }
 
