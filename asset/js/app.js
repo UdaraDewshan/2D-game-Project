@@ -196,6 +196,24 @@ function moveBlock(){
 
 }
 
+var deadImageNumber = 1;
+var deadWorkerId = 0;
+
 function  dead(){
+
+    deadImageNumber++;
+
+    if(deadImageNumber==11){
+        deadImageNumber=10;
+
+        playerID.style.marginTop = "400px";
+
+        document.getElementById("endScreen").style.visibility = "visible";
+        document.getElementById("endScore").innerHTML = newScore;
+
+    }
+
+     playerID.src =  "Dead (" +deadImageNumber+ ").png";
+
 
 }
