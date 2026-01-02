@@ -159,43 +159,52 @@ function createBlock(){
 }
 
 //Move Block
-
 var moveBlockWorkerId = 0;
 
 function moveBlock(){
 
-    for(var i=1; i<=blockId; i++){
-        
-        var currentBlock = document.getElementById("block" + i);
-        var currentBlockMarginLeft = currentBlock.style.marginLeft;
-        var newBlockMarginLeft = parseInt(currentBlockMarginLeft) - 20;
+    for(var i=1; i<=blockId;  i++){
 
-        currentBlock.style.marginLeft = newBlockMarginLeft + "px";
+     var currentBlock = document.getElementById("block" + i);
+     var currentBlockMarginLeft = currentBlock.style.marginLeft;
+     var newBlockMarginLeft = parseInt(currentBlockMarginLeft) - 20; 
+      
+     currentBlock.style.marginLeft = newBlockMarginLeft + "px";
 
-        if(newBlockMarginLeft < 137 & newBlockMarginLeft > 79){
-            if(playerMarginTop > 250){
-                clearInterval(scoreWorkerId);
-                clearInterval(moveBackgroundWorkerId);
-                clearInterval(runWorkerId);
-                runSound.pause();
 
-                clearInterval(jumpWorkerId);
-                jumpWorkerId = -1;
 
-                clearInterval(creatBlockWorkerId);
-                clearInterval(moveBlockWorkerId);
+
+      //alert(newBlockMarginLeft);
+     //137,79
+
+     if(newBlockMarginLeft < 137 & newBlockMarginLeft > 79){
+        //alert(playerMarginTop);
+        //260
+
+         if(playerMarginTop > 250){ 
+                     
+            clearInterval(scoreWorkerId);
+            clearInterval(moveBackgroundWorkerId);
+            clearInterval(runWorkerId);
+            runSound.pause();
+
+
+            clearInterval(jumpWorkerId);
+            jumpWorkerId = -1;
+
+            clearInterval(creatBlockWorkerId);
+            clearInterval(moveBlockWorkerId);
             
+           //alert("Dead");
+           deadWorkerId  =setInterval(dead,100);
+           deadSound.play();
 
-                //alert("Dead");
-                deadWorkerId  =setInterval(dead,100);
-                deadSound.play();
-            }
         }
-
-    }
-
+     }
+   }
 }
 
+//dead]
 var deadImageNumber = 1;
 var deadWorkerId = 0;
 
