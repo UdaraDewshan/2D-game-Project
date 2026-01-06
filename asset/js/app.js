@@ -91,15 +91,15 @@ function jump(){
    if(jumpImageNumber <= 7){ //jump images 2-7
 
     playerMarginTop = playerMarginTop - 40;
-    playerID.style.marginTop = playerMarginTop +"px";
-
+    playerId.style.marginTop = playerMarginTop +"px";
+    
    }
 
    //land
    if(jumpImageNumber >= 8){ //jump image 8-1
 
     playerMarginTop = playerMarginTop + 40;
-    playerID.style.marginTop = playerMarginTop + "px";
+    playerId.style.marginTop = playerMarginTop + "px";
 
    }
   
@@ -132,8 +132,9 @@ function jump(){
 
    }
 
-   playerID.src= "Jump (" + jumpImageNumber + ").png";
+   playerId.src= "Jump (" + jumpImageNumber + ").png";
 }
+
 
 
 //create a block 
@@ -170,9 +171,6 @@ function moveBlock(){
      var newBlockMarginLeft = parseInt(currentBlockMarginLeft) - 20; 
       
      currentBlock.style.marginLeft = newBlockMarginLeft + "px";
-
-
-
 
       //alert(newBlockMarginLeft);
      //137,79
